@@ -10,12 +10,13 @@ fn main() {
     let mut buf = String::new();
     std::io::stdin().read_line(&mut buf).unwrap();
 
-    let n:i32 = buf.trim().parse().unwrap();
+    let n:u32 = buf.trim().parse().unwrap();
 
-    match (n % 3 == 0, n % 5 == 0){
-        (true, true) => println!("FizzBuzz"),
-        (true, false) => println!("Fizz"),
-        (false, true) => println!("Buzz"),
-        _ => println!("{}", n)
-    };
+    let mut res:u32 = 0;
+
+    for i in 1..=n{
+        res += i;
+    }
+
+    println!("{}", res);
 }
