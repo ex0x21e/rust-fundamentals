@@ -10,13 +10,11 @@ fn main() {
     let mut buf = String::new();
     std::io::stdin().read_line(&mut buf).unwrap();
 
-    let n:u32 = buf.trim().parse().unwrap();
+    let n:i32 = buf.trim().parse().unwrap();
 
-    let mut res:u32 = 0;
+    println!("{}",  square(n));
+}
 
-    for i in 1..=n{
-        res += i;
-    }
-
-    println!("{}", res);
+fn square(n:i32) -> i32{
+    n * n
 }
