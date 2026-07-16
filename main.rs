@@ -16,6 +16,6 @@ fn main() {
         (true, true) => println!("FizzBuzz"),
         (true, false) => println!("Fizz"),
         (false, true) => println!("Buzz"),
-        _ => println!("{n}")
+        _ => println!("{}", n)
     };
 }
