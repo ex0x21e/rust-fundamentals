@@ -3,15 +3,15 @@
 use std::io::Read;
 
 fn main() {
+    //Rectangle Area
     let mut input = String::new();
-    std::io::stdin()
-    .read_to_string(& mut input) //reads all bytes and converts to string
-    .unwrap();
+
+    std::io::stdin().read_to_string(&mut input).unwrap();
 
     let mut it = input.split_whitespace();
 
-    let a: i64 = it.next().unwrap().parse().unwrap();
-    let b: i64 = it.next().unwrap().parse().unwrap();
+    let width: i64 = it.next().unwrap().parse().unwrap();
+    let height: i64 = it.next().unwrap().parse().unwrap();
 
-    println!("{}", a+b);
+    println!("{:.2}", width * height);
 }
